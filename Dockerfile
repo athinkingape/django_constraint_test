@@ -24,3 +24,5 @@ RUN apt-get -y install python python2.7 python-pip python-setuptools python-whee
 RUN pip install 'django<2'
 
 COPY django_constraints /tmp/django_constraints
+COPY entrypoint.sh /
+CMD /entrypoint.sh
